@@ -16,19 +16,24 @@ import http = require('http');
 /* tslint:disable:no-unused-locals */
 import { BatchRetrieveByKeysReq } from '../model/batchRetrieveByKeysReq';
 import { BatchRetrieveByResourcesReq } from '../model/batchRetrieveByResourcesReq';
+import { BatchRetrieveConfigsByKeysRsp } from '../model/batchRetrieveConfigsByKeysRsp';
+import { BatchRetrieveConfigsRsp } from '../model/batchRetrieveConfigsRsp';
 import { CreateConfigReq } from '../model/createConfigReq';
+import { CreateConfigRsp } from '../model/createConfigRsp';
+import { CursorConfigsRsp } from '../model/cursorConfigsRsp';
 import { CursorQuery } from '../model/cursorQuery';
+import { DeleteRsp } from '../model/deleteRsp';
+import { GetConfigRsp } from '../model/getConfigRsp';
 import { IdsReq } from '../model/idsReq';
 import { InlineResponse200 } from '../model/inlineResponse200';
-import { InlineResponse2001 } from '../model/inlineResponse2001';
-import { InlineResponse2002 } from '../model/inlineResponse2002';
-import { InlineResponse2003 } from '../model/inlineResponse2003';
-import { InlineResponse2004 } from '../model/inlineResponse2004';
-import { InlineResponse2005 } from '../model/inlineResponse2005';
+import { PageConfigsRsp } from '../model/pageConfigsRsp';
 import { PageQuery } from '../model/pageQuery';
 import { RetrieveConfigByKeyReq } from '../model/retrieveConfigByKeyReq';
+import { RetrieveConfigByKeyRsp } from '../model/retrieveConfigByKeyRsp';
 import { UpdateConfigReq } from '../model/updateConfigReq';
+import { UpdateConfigRsp } from '../model/updateConfigRsp';
 import { UpdateConfigTemplateReq } from '../model/updateConfigTemplateReq';
+import { UpdateConfigTemplateRsp } from '../model/updateConfigTemplateRsp';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
@@ -110,7 +115,7 @@ export class ConfigApi {
      * @summary 批量删除配置
      * @param idsReq 
      */
-    public async configBatchDeletePost (idsReq?: IdsReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: InlineResponse2001;  }> {
+    public async configBatchDeletePost (idsReq?: IdsReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }> {
         const localVarPath = this.basePath + '/config/batchDelete';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -156,12 +161,12 @@ export class ConfigApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: InlineResponse2001;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
-                        body = ObjectSerializer.deserialize(body, "InlineResponse2001");
+                        body = ObjectSerializer.deserialize(body, "DeleteRsp");
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             resolve({ response: response, body: body });
                         } else {
@@ -177,7 +182,7 @@ export class ConfigApi {
      * @summary 查询配置
      * @param batchRetrieveByKeysReq 
      */
-    public async configBatchRetrieveByKeysPost (batchRetrieveByKeysReq?: BatchRetrieveByKeysReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: InlineResponse2002;  }> {
+    public async configBatchRetrieveByKeysPost (batchRetrieveByKeysReq?: BatchRetrieveByKeysReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: BatchRetrieveConfigsByKeysRsp;  }> {
         const localVarPath = this.basePath + '/config/batchRetrieveByKeys';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -223,12 +228,12 @@ export class ConfigApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: InlineResponse2002;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: BatchRetrieveConfigsByKeysRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
-                        body = ObjectSerializer.deserialize(body, "InlineResponse2002");
+                        body = ObjectSerializer.deserialize(body, "BatchRetrieveConfigsByKeysRsp");
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             resolve({ response: response, body: body });
                         } else {
@@ -244,7 +249,7 @@ export class ConfigApi {
      * @summary 查询配置
      * @param batchRetrieveByResourcesReq 
      */
-    public async configBatchRetrieveByResourcesPost (batchRetrieveByResourcesReq?: BatchRetrieveByResourcesReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: InlineResponse2002;  }> {
+    public async configBatchRetrieveByResourcesPost (batchRetrieveByResourcesReq?: BatchRetrieveByResourcesReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: InlineResponse200;  }> {
         const localVarPath = this.basePath + '/config/batchRetrieveByResources';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -290,12 +295,12 @@ export class ConfigApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: InlineResponse2002;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: InlineResponse200;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
-                        body = ObjectSerializer.deserialize(body, "InlineResponse2002");
+                        body = ObjectSerializer.deserialize(body, "InlineResponse200");
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             resolve({ response: response, body: body });
                         } else {
@@ -311,7 +316,7 @@ export class ConfigApi {
      * @summary 批量查询配置
      * @param idsReq 
      */
-    public async configBatchRetrievePost (idsReq?: IdsReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: InlineResponse2002;  }> {
+    public async configBatchRetrievePost (idsReq?: IdsReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: BatchRetrieveConfigsRsp;  }> {
         const localVarPath = this.basePath + '/config/batchRetrieve';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -357,12 +362,12 @@ export class ConfigApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: InlineResponse2002;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: BatchRetrieveConfigsRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
-                        body = ObjectSerializer.deserialize(body, "InlineResponse2002");
+                        body = ObjectSerializer.deserialize(body, "BatchRetrieveConfigsRsp");
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             resolve({ response: response, body: body });
                         } else {
@@ -378,7 +383,7 @@ export class ConfigApi {
      * @summary Cursor查询配置
      * @param cursorQuery 
      */
-    public async configCursorPost (cursorQuery?: CursorQuery, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: InlineResponse2004;  }> {
+    public async configCursorPost (cursorQuery?: CursorQuery, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CursorConfigsRsp;  }> {
         const localVarPath = this.basePath + '/config/cursor';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -424,12 +429,12 @@ export class ConfigApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: InlineResponse2004;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: CursorConfigsRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
-                        body = ObjectSerializer.deserialize(body, "InlineResponse2004");
+                        body = ObjectSerializer.deserialize(body, "CursorConfigsRsp");
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             resolve({ response: response, body: body });
                         } else {
@@ -445,7 +450,7 @@ export class ConfigApi {
      * @summary 删除配置
      * @param id 删除配置
      */
-    public async configIdDelete (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: InlineResponse2001;  }> {
+    public async configIdDelete (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }> {
         const localVarPath = this.basePath + '/config/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -496,12 +501,12 @@ export class ConfigApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: InlineResponse2001;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
-                        body = ObjectSerializer.deserialize(body, "InlineResponse2001");
+                        body = ObjectSerializer.deserialize(body, "DeleteRsp");
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             resolve({ response: response, body: body });
                         } else {
@@ -517,7 +522,7 @@ export class ConfigApi {
      * @summary 查询配置
      * @param id 查询配置通过配置ID
      */
-    public async configIdGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: InlineResponse200;  }> {
+    public async configIdGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetConfigRsp;  }> {
         const localVarPath = this.basePath + '/config/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -568,12 +573,12 @@ export class ConfigApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: InlineResponse200;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: GetConfigRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
-                        body = ObjectSerializer.deserialize(body, "InlineResponse200");
+                        body = ObjectSerializer.deserialize(body, "GetConfigRsp");
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             resolve({ response: response, body: body });
                         } else {
@@ -589,7 +594,7 @@ export class ConfigApi {
      * @summary Page查询配置
      * @param pageQuery 
      */
-    public async configPagePost (pageQuery?: PageQuery, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: InlineResponse2003;  }> {
+    public async configPagePost (pageQuery?: PageQuery, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageConfigsRsp;  }> {
         const localVarPath = this.basePath + '/config/page';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -635,12 +640,12 @@ export class ConfigApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: InlineResponse2003;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: PageConfigsRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
-                        body = ObjectSerializer.deserialize(body, "InlineResponse2003");
+                        body = ObjectSerializer.deserialize(body, "PageConfigsRsp");
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             resolve({ response: response, body: body });
                         } else {
@@ -656,7 +661,7 @@ export class ConfigApi {
      * @summary 创建配置
      * @param createConfigReq 
      */
-    public async configPost (createConfigReq?: CreateConfigReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: InlineResponse200;  }> {
+    public async configPost (createConfigReq?: CreateConfigReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateConfigRsp;  }> {
         const localVarPath = this.basePath + '/config';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -702,12 +707,12 @@ export class ConfigApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: InlineResponse200;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: CreateConfigRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
-                        body = ObjectSerializer.deserialize(body, "InlineResponse200");
+                        body = ObjectSerializer.deserialize(body, "CreateConfigRsp");
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             resolve({ response: response, body: body });
                         } else {
@@ -723,7 +728,7 @@ export class ConfigApi {
      * @summary 更新配置
      * @param updateConfigReq 
      */
-    public async configPut (updateConfigReq?: UpdateConfigReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: InlineResponse200;  }> {
+    public async configPut (updateConfigReq?: UpdateConfigReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: UpdateConfigRsp;  }> {
         const localVarPath = this.basePath + '/config';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -769,12 +774,12 @@ export class ConfigApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: InlineResponse200;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: UpdateConfigRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
-                        body = ObjectSerializer.deserialize(body, "InlineResponse200");
+                        body = ObjectSerializer.deserialize(body, "UpdateConfigRsp");
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             resolve({ response: response, body: body });
                         } else {
@@ -790,7 +795,7 @@ export class ConfigApi {
      * @summary 查询配置
      * @param retrieveConfigByKeyReq 
      */
-    public async configRetrieveByKeyPost (retrieveConfigByKeyReq?: RetrieveConfigByKeyReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: InlineResponse200;  }> {
+    public async configRetrieveByKeyPost (retrieveConfigByKeyReq?: RetrieveConfigByKeyReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: RetrieveConfigByKeyRsp;  }> {
         const localVarPath = this.basePath + '/config/retrieveByKey';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -836,12 +841,12 @@ export class ConfigApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: InlineResponse200;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: RetrieveConfigByKeyRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
-                        body = ObjectSerializer.deserialize(body, "InlineResponse200");
+                        body = ObjectSerializer.deserialize(body, "RetrieveConfigByKeyRsp");
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             resolve({ response: response, body: body });
                         } else {
@@ -857,7 +862,7 @@ export class ConfigApi {
      * @summary 更新配置模版
      * @param updateConfigTemplateReq 
      */
-    public async configTemplatePut (updateConfigTemplateReq?: UpdateConfigTemplateReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: InlineResponse2005;  }> {
+    public async configTemplatePut (updateConfigTemplateReq?: UpdateConfigTemplateReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: UpdateConfigTemplateRsp;  }> {
         const localVarPath = this.basePath + '/configTemplate';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -903,12 +908,12 @@ export class ConfigApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: InlineResponse2005;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: UpdateConfigTemplateRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
-                        body = ObjectSerializer.deserialize(body, "InlineResponse2005");
+                        body = ObjectSerializer.deserialize(body, "UpdateConfigTemplateRsp");
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             resolve({ response: response, body: body });
                         } else {

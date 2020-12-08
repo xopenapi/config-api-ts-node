@@ -11,12 +11,12 @@
  */
 
 import { RequestFile } from '../api';
-import { Config } from './config';
+import { PageConfigTemplatesRspData } from './pageConfigTemplatesRspData';
 
-export class InlineResponse200 {
+export class PageConfigTemplatesRsp {
     'code'?: number;
     'msg'?: string;
-    'data'?: Array<Config>;
+    'data'?: PageConfigTemplatesRspData;
 
     static discriminator: string | undefined = undefined;
 
@@ -34,11 +34,11 @@ export class InlineResponse200 {
         {
             "name": "data",
             "baseName": "data",
-            "type": "Array<Config>"
+            "type": "PageConfigTemplatesRspData"
         }    ];
 
     static getAttributeTypeMap() {
-        return InlineResponse200.attributeTypeMap;
+        return PageConfigTemplatesRsp.attributeTypeMap;
     }
 }
 

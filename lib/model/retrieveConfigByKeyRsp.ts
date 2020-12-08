@@ -13,10 +13,10 @@
 import { RequestFile } from '../api';
 import { Config } from './config';
 
-export class InlineResponse200 {
+export class RetrieveConfigByKeyRsp {
     'code'?: number;
     'msg'?: string;
-    'data'?: Array<Config>;
+    'data'?: Config;
 
     static discriminator: string | undefined = undefined;
 
@@ -34,11 +34,11 @@ export class InlineResponse200 {
         {
             "name": "data",
             "baseName": "data",
-            "type": "Array<Config>"
+            "type": "Config"
         }    ];
 
     static getAttributeTypeMap() {
-        return InlineResponse200.attributeTypeMap;
+        return RetrieveConfigByKeyRsp.attributeTypeMap;
     }
 }
 

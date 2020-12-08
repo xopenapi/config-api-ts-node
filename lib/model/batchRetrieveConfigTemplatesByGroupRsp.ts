@@ -11,12 +11,12 @@
  */
 
 import { RequestFile } from '../api';
-import { Config } from './config';
+import { ConfigTemplate } from './configTemplate';
 
-export class InlineResponse200 {
+export class BatchRetrieveConfigTemplatesByGroupRsp {
     'code'?: number;
     'msg'?: string;
-    'data'?: Array<Config>;
+    'data'?: Array<ConfigTemplate>;
 
     static discriminator: string | undefined = undefined;
 
@@ -34,11 +34,11 @@ export class InlineResponse200 {
         {
             "name": "data",
             "baseName": "data",
-            "type": "Array<Config>"
+            "type": "Array<ConfigTemplate>"
         }    ];
 
     static getAttributeTypeMap() {
-        return InlineResponse200.attributeTypeMap;
+        return BatchRetrieveConfigTemplatesByGroupRsp.attributeTypeMap;
     }
 }
 

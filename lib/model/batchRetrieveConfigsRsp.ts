@@ -13,7 +13,7 @@
 import { RequestFile } from '../api';
 import { Config } from './config';
 
-export class InlineResponse200 {
+export class BatchRetrieveConfigsRsp {
     'code'?: number;
     'msg'?: string;
     'data'?: Array<Config>;
@@ -38,7 +38,7 @@ export class InlineResponse200 {
         }    ];
 
     static getAttributeTypeMap() {
-        return InlineResponse200.attributeTypeMap;
+        return BatchRetrieveConfigsRsp.attributeTypeMap;
     }
 }
 
