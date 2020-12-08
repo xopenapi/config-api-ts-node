@@ -5,6 +5,7 @@ export * from './batchRetrieveConfigTemplatesByGroupRsp';
 export * from './batchRetrieveConfigTemplatesByKeysRsp';
 export * from './batchRetrieveConfigTemplatesRsp';
 export * from './batchRetrieveConfigsByKeysRsp';
+export * from './batchRetrieveConfigsByResourcesRsp';
 export * from './batchRetrieveConfigsRsp';
 export * from './config';
 export * from './configGroup';
@@ -29,7 +30,6 @@ export * from './getConfigGroupsRsp';
 export * from './getConfigRsp';
 export * from './getConfigTemplateRsp';
 export * from './idsReq';
-export * from './inlineResponse200';
 export * from './pageConfigGroupsRsp';
 export * from './pageConfigGroupsRspData';
 export * from './pageConfigTemplatesRsp';
@@ -58,6 +58,7 @@ import { BatchRetrieveConfigTemplatesByGroupRsp } from './batchRetrieveConfigTem
 import { BatchRetrieveConfigTemplatesByKeysRsp } from './batchRetrieveConfigTemplatesByKeysRsp';
 import { BatchRetrieveConfigTemplatesRsp } from './batchRetrieveConfigTemplatesRsp';
 import { BatchRetrieveConfigsByKeysRsp } from './batchRetrieveConfigsByKeysRsp';
+import { BatchRetrieveConfigsByResourcesRsp } from './batchRetrieveConfigsByResourcesRsp';
 import { BatchRetrieveConfigsRsp } from './batchRetrieveConfigsRsp';
 import { Config } from './config';
 import { ConfigGroup } from './configGroup';
@@ -82,7 +83,6 @@ import { GetConfigGroupsRsp } from './getConfigGroupsRsp';
 import { GetConfigRsp } from './getConfigRsp';
 import { GetConfigTemplateRsp } from './getConfigTemplateRsp';
 import { IdsReq } from './idsReq';
-import { InlineResponse200 } from './inlineResponse200';
 import { PageConfigGroupsRsp } from './pageConfigGroupsRsp';
 import { PageConfigGroupsRspData } from './pageConfigGroupsRspData';
 import { PageConfigTemplatesRsp } from './pageConfigTemplatesRsp';
@@ -125,6 +125,7 @@ let typeMap: {[index: string]: any} = {
     "BatchRetrieveConfigTemplatesByKeysRsp": BatchRetrieveConfigTemplatesByKeysRsp,
     "BatchRetrieveConfigTemplatesRsp": BatchRetrieveConfigTemplatesRsp,
     "BatchRetrieveConfigsByKeysRsp": BatchRetrieveConfigsByKeysRsp,
+    "BatchRetrieveConfigsByResourcesRsp": BatchRetrieveConfigsByResourcesRsp,
     "BatchRetrieveConfigsRsp": BatchRetrieveConfigsRsp,
     "Config": Config,
     "ConfigGroup": ConfigGroup,
@@ -149,7 +150,6 @@ let typeMap: {[index: string]: any} = {
     "GetConfigRsp": GetConfigRsp,
     "GetConfigTemplateRsp": GetConfigTemplateRsp,
     "IdsReq": IdsReq,
-    "InlineResponse200": InlineResponse200,
     "PageConfigGroupsRsp": PageConfigGroupsRsp,
     "PageConfigGroupsRspData": PageConfigGroupsRspData,
     "PageConfigTemplatesRsp": PageConfigTemplatesRsp,

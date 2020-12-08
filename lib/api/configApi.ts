@@ -17,6 +17,7 @@ import http = require('http');
 import { BatchRetrieveByKeysReq } from '../model/batchRetrieveByKeysReq';
 import { BatchRetrieveByResourcesReq } from '../model/batchRetrieveByResourcesReq';
 import { BatchRetrieveConfigsByKeysRsp } from '../model/batchRetrieveConfigsByKeysRsp';
+import { BatchRetrieveConfigsByResourcesRsp } from '../model/batchRetrieveConfigsByResourcesRsp';
 import { BatchRetrieveConfigsRsp } from '../model/batchRetrieveConfigsRsp';
 import { CreateConfigReq } from '../model/createConfigReq';
 import { CreateConfigRsp } from '../model/createConfigRsp';
@@ -25,7 +26,6 @@ import { CursorQuery } from '../model/cursorQuery';
 import { DeleteRsp } from '../model/deleteRsp';
 import { GetConfigRsp } from '../model/getConfigRsp';
 import { IdsReq } from '../model/idsReq';
-import { InlineResponse200 } from '../model/inlineResponse200';
 import { PageConfigsRsp } from '../model/pageConfigsRsp';
 import { PageQuery } from '../model/pageQuery';
 import { RetrieveConfigByKeyReq } from '../model/retrieveConfigByKeyReq';
@@ -249,7 +249,7 @@ export class ConfigApi {
      * @summary 查询配置
      * @param batchRetrieveByResourcesReq 
      */
-    public async configBatchRetrieveByResourcesPost (batchRetrieveByResourcesReq?: BatchRetrieveByResourcesReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: InlineResponse200;  }> {
+    public async configBatchRetrieveByResourcesPost (batchRetrieveByResourcesReq?: BatchRetrieveByResourcesReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: BatchRetrieveConfigsByResourcesRsp;  }> {
         const localVarPath = this.basePath + '/config/batchRetrieveByResources';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -295,12 +295,12 @@ export class ConfigApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: InlineResponse200;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: BatchRetrieveConfigsByResourcesRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
-                        body = ObjectSerializer.deserialize(body, "InlineResponse200");
+                        body = ObjectSerializer.deserialize(body, "BatchRetrieveConfigsByResourcesRsp");
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             resolve({ response: response, body: body });
                         } else {
