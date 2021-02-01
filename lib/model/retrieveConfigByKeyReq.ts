@@ -11,30 +11,23 @@
  */
 
 import { RequestFile } from '../api';
-import { Config } from './config';
 
 export class RetrieveConfigByKeyReq {
-    'code'?: number;
-    'msg'?: string;
-    'data'?: Array<Config>;
+    'resourceId'?: string;
+    'key'?: string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "code",
-            "baseName": "code",
-            "type": "number"
-        },
-        {
-            "name": "msg",
-            "baseName": "msg",
+            "name": "resourceId",
+            "baseName": "resourceId",
             "type": "string"
         },
         {
-            "name": "data",
-            "baseName": "data",
-            "type": "Array<Config>"
+            "name": "key",
+            "baseName": "key",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
