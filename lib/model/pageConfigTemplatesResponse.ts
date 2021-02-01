@@ -11,12 +11,12 @@
  */
 
 import { RequestFile } from '../api';
-import { Config } from './config';
+import { PageConfigTemplatesResponseData } from './pageConfigTemplatesResponseData';
 
-export class RetrieveConfigByKeyReq {
+export class PageConfigTemplatesResponse {
     'code'?: number;
     'msg'?: string;
-    'data'?: Array<Config>;
+    'data'?: PageConfigTemplatesResponseData;
 
     static discriminator: string | undefined = undefined;
 
@@ -34,11 +34,11 @@ export class RetrieveConfigByKeyReq {
         {
             "name": "data",
             "baseName": "data",
-            "type": "Array<Config>"
+            "type": "PageConfigTemplatesResponseData"
         }    ];
 
     static getAttributeTypeMap() {
-        return RetrieveConfigByKeyReq.attributeTypeMap;
+        return PageConfigTemplatesResponse.attributeTypeMap;
     }
 }
 

@@ -11,12 +11,12 @@
  */
 
 import { RequestFile } from '../api';
-import { Config } from './config';
+import { CursorConfigGroupsResponseData } from './cursorConfigGroupsResponseData';
 
-export class RetrieveConfigByKeyReq {
+export class CursorConfigGroupsResponse {
     'code'?: number;
     'msg'?: string;
-    'data'?: Array<Config>;
+    'data'?: CursorConfigGroupsResponseData;
 
     static discriminator: string | undefined = undefined;
 
@@ -34,11 +34,11 @@ export class RetrieveConfigByKeyReq {
         {
             "name": "data",
             "baseName": "data",
-            "type": "Array<Config>"
+            "type": "CursorConfigGroupsResponseData"
         }    ];
 
     static getAttributeTypeMap() {
-        return RetrieveConfigByKeyReq.attributeTypeMap;
+        return CursorConfigGroupsResponse.attributeTypeMap;
     }
 }
 

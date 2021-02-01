@@ -11,12 +11,14 @@
  */
 
 import { RequestFile } from '../api';
-import { Config } from './config';
 
-export class RetrieveConfigByKeyReq {
+export class DeleteResponse {
     'code'?: number;
     'msg'?: string;
-    'data'?: Array<Config>;
+    /**
+    * 暂时未返回数据
+    */
+    'data'?: any | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -34,11 +36,11 @@ export class RetrieveConfigByKeyReq {
         {
             "name": "data",
             "baseName": "data",
-            "type": "Array<Config>"
+            "type": "any"
         }    ];
 
     static getAttributeTypeMap() {
-        return RetrieveConfigByKeyReq.attributeTypeMap;
+        return DeleteResponse.attributeTypeMap;
     }
 }
 

@@ -13,10 +13,10 @@
 import { RequestFile } from '../api';
 import { Config } from './config';
 
-export class RetrieveConfigByKeyReq {
+export class RetrieveConfigByKeyResponse {
     'code'?: number;
     'msg'?: string;
-    'data'?: Array<Config>;
+    'data'?: Config;
 
     static discriminator: string | undefined = undefined;
 
@@ -34,11 +34,11 @@ export class RetrieveConfigByKeyReq {
         {
             "name": "data",
             "baseName": "data",
-            "type": "Array<Config>"
+            "type": "Config"
         }    ];
 
     static getAttributeTypeMap() {
-        return RetrieveConfigByKeyReq.attributeTypeMap;
+        return RetrieveConfigByKeyResponse.attributeTypeMap;
     }
 }
 

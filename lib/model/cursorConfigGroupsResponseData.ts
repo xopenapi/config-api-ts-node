@@ -11,34 +11,29 @@
  */
 
 import { RequestFile } from '../api';
-import { Config } from './config';
+import { ConfigGroup } from './configGroup';
+import { CursorExtra } from './cursorExtra';
 
-export class RetrieveConfigByKeyReq {
-    'code'?: number;
-    'msg'?: string;
-    'data'?: Array<Config>;
+export class CursorConfigGroupsResponseData {
+    'extra'?: CursorExtra;
+    'items'?: Array<ConfigGroup>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "code",
-            "baseName": "code",
-            "type": "number"
+            "name": "extra",
+            "baseName": "extra",
+            "type": "CursorExtra"
         },
         {
-            "name": "msg",
-            "baseName": "msg",
-            "type": "string"
-        },
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "Array<Config>"
+            "name": "items",
+            "baseName": "items",
+            "type": "Array<ConfigGroup>"
         }    ];
 
     static getAttributeTypeMap() {
-        return RetrieveConfigByKeyReq.attributeTypeMap;
+        return CursorConfigGroupsResponseData.attributeTypeMap;
     }
 }
 

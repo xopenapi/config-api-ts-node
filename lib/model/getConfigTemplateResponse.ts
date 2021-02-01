@@ -11,12 +11,12 @@
  */
 
 import { RequestFile } from '../api';
-import { Config } from './config';
+import { ConfigTemplate } from './configTemplate';
 
-export class RetrieveConfigByKeyReq {
+export class GetConfigTemplateResponse {
     'code'?: number;
     'msg'?: string;
-    'data'?: Array<Config>;
+    'data'?: ConfigTemplate;
 
     static discriminator: string | undefined = undefined;
 
@@ -34,11 +34,11 @@ export class RetrieveConfigByKeyReq {
         {
             "name": "data",
             "baseName": "data",
-            "type": "Array<Config>"
+            "type": "ConfigTemplate"
         }    ];
 
     static getAttributeTypeMap() {
-        return RetrieveConfigByKeyReq.attributeTypeMap;
+        return GetConfigTemplateResponse.attributeTypeMap;
     }
 }
 

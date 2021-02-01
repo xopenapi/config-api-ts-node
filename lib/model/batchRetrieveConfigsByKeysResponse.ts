@@ -13,7 +13,7 @@
 import { RequestFile } from '../api';
 import { Config } from './config';
 
-export class RetrieveConfigByKeyReq {
+export class BatchRetrieveConfigsByKeysResponse {
     'code'?: number;
     'msg'?: string;
     'data'?: Array<Config>;
@@ -38,7 +38,7 @@ export class RetrieveConfigByKeyReq {
         }    ];
 
     static getAttributeTypeMap() {
-        return RetrieveConfigByKeyReq.attributeTypeMap;
+        return BatchRetrieveConfigsByKeysResponse.attributeTypeMap;
     }
 }
 

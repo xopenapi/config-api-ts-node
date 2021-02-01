@@ -1,106 +1,108 @@
 export * from './batchRetrieveByKeysReq';
 export * from './batchRetrieveByResourcesReq';
+export * from './batchRetrieveConfigGroupsResponse';
 export * from './batchRetrieveConfigTemplateByKeysReq';
-export * from './batchRetrieveConfigTemplatesByGroupRsp';
-export * from './batchRetrieveConfigTemplatesByKeysRsp';
-export * from './batchRetrieveConfigTemplatesRsp';
-export * from './batchRetrieveConfigsByKeysRsp';
-export * from './batchRetrieveConfigsByResourcesRsp';
-export * from './batchRetrieveConfigsRsp';
+export * from './batchRetrieveConfigTemplateByKeysResponse';
+export * from './batchRetrieveConfigTemplatesByGroupResponse';
+export * from './batchRetrieveConfigTemplatesByKeysResponse';
+export * from './batchRetrieveConfigTemplatesResponse';
+export * from './batchRetrieveConfigsByKeysResponse';
+export * from './batchRetrieveConfigsByResourcesResponse';
+export * from './batchRetrieveConfigsResponse';
 export * from './config';
 export * from './configGroup';
 export * from './configTemplate';
 export * from './createConfigGroupReq';
-export * from './createConfigGroupRsp';
+export * from './createConfigGroupResponse';
 export * from './createConfigReq';
-export * from './createConfigRsp';
+export * from './createConfigResponse';
 export * from './createConfigTemplateReq';
-export * from './createConfigTemplateRsp';
-export * from './cursorConfigGroupsRsp';
-export * from './cursorConfigGroupsRspData';
-export * from './cursorConfigTemplatesRsp';
-export * from './cursorConfigTemplatesRspData';
-export * from './cursorConfigsRsp';
-export * from './cursorConfigsRspData';
+export * from './createConfigTemplateResponse';
+export * from './cursorConfigGroupsResponse';
+export * from './cursorConfigGroupsResponseData';
+export * from './cursorConfigTemplatesResponse';
+export * from './cursorConfigTemplatesResponseData';
+export * from './cursorConfigsResponse';
+export * from './cursorConfigsResponseData';
 export * from './cursorExtra';
 export * from './cursorQuery';
-export * from './deleteRsp';
-export * from './getConfigGroupRsp';
-export * from './getConfigGroupsRsp';
-export * from './getConfigRsp';
-export * from './getConfigTemplateRsp';
+export * from './deleteResponse';
+export * from './getConfigGroupResponse';
+export * from './getConfigResponse';
+export * from './getConfigTemplateResponse';
 export * from './idsReq';
-export * from './pageConfigGroupsRsp';
-export * from './pageConfigGroupsRspData';
-export * from './pageConfigTemplatesRsp';
-export * from './pageConfigTemplatesRspData';
-export * from './pageConfigsRsp';
-export * from './pageConfigsRspData';
+export * from './pageConfigGroupsResponse';
+export * from './pageConfigGroupsResponseData';
+export * from './pageConfigTemplatesResponse';
+export * from './pageConfigTemplatesResponseData';
+export * from './pageConfigsResponse';
+export * from './pageConfigsResponseData';
 export * from './pageQuery';
 export * from './retrieveConfigByKeyReq';
-export * from './retrieveConfigByKeyRsp';
-export * from './retrieveConfigGroupByNameRsp';
-export * from './retrieveConfigTemplateByKeyRsp';
+export * from './retrieveConfigByKeyResponse';
+export * from './retrieveConfigGroupByNameResponse';
+export * from './retrieveConfigTemplateByKeyResponse';
 export * from './sortSpec';
 export * from './updateConfigGroupReq';
-export * from './updateConfigGroupRsp';
+export * from './updateConfigGroupResponse';
 export * from './updateConfigReq';
-export * from './updateConfigRsp';
+export * from './updateConfigResponse';
 export * from './updateConfigTemplateReq';
-export * from './updateConfigTemplateRsp';
+export * from './updateConfigTemplateResponse';
 
 import localVarRequest = require('request');
 
 import { BatchRetrieveByKeysReq } from './batchRetrieveByKeysReq';
 import { BatchRetrieveByResourcesReq } from './batchRetrieveByResourcesReq';
+import { BatchRetrieveConfigGroupsResponse } from './batchRetrieveConfigGroupsResponse';
 import { BatchRetrieveConfigTemplateByKeysReq } from './batchRetrieveConfigTemplateByKeysReq';
-import { BatchRetrieveConfigTemplatesByGroupRsp } from './batchRetrieveConfigTemplatesByGroupRsp';
-import { BatchRetrieveConfigTemplatesByKeysRsp } from './batchRetrieveConfigTemplatesByKeysRsp';
-import { BatchRetrieveConfigTemplatesRsp } from './batchRetrieveConfigTemplatesRsp';
-import { BatchRetrieveConfigsByKeysRsp } from './batchRetrieveConfigsByKeysRsp';
-import { BatchRetrieveConfigsByResourcesRsp } from './batchRetrieveConfigsByResourcesRsp';
-import { BatchRetrieveConfigsRsp } from './batchRetrieveConfigsRsp';
+import { BatchRetrieveConfigTemplateByKeysResponse } from './batchRetrieveConfigTemplateByKeysResponse';
+import { BatchRetrieveConfigTemplatesByGroupResponse } from './batchRetrieveConfigTemplatesByGroupResponse';
+import { BatchRetrieveConfigTemplatesByKeysResponse } from './batchRetrieveConfigTemplatesByKeysResponse';
+import { BatchRetrieveConfigTemplatesResponse } from './batchRetrieveConfigTemplatesResponse';
+import { BatchRetrieveConfigsByKeysResponse } from './batchRetrieveConfigsByKeysResponse';
+import { BatchRetrieveConfigsByResourcesResponse } from './batchRetrieveConfigsByResourcesResponse';
+import { BatchRetrieveConfigsResponse } from './batchRetrieveConfigsResponse';
 import { Config } from './config';
 import { ConfigGroup } from './configGroup';
 import { ConfigTemplate } from './configTemplate';
 import { CreateConfigGroupReq } from './createConfigGroupReq';
-import { CreateConfigGroupRsp } from './createConfigGroupRsp';
+import { CreateConfigGroupResponse } from './createConfigGroupResponse';
 import { CreateConfigReq } from './createConfigReq';
-import { CreateConfigRsp } from './createConfigRsp';
+import { CreateConfigResponse } from './createConfigResponse';
 import { CreateConfigTemplateReq } from './createConfigTemplateReq';
-import { CreateConfigTemplateRsp } from './createConfigTemplateRsp';
-import { CursorConfigGroupsRsp } from './cursorConfigGroupsRsp';
-import { CursorConfigGroupsRspData } from './cursorConfigGroupsRspData';
-import { CursorConfigTemplatesRsp } from './cursorConfigTemplatesRsp';
-import { CursorConfigTemplatesRspData } from './cursorConfigTemplatesRspData';
-import { CursorConfigsRsp } from './cursorConfigsRsp';
-import { CursorConfigsRspData } from './cursorConfigsRspData';
+import { CreateConfigTemplateResponse } from './createConfigTemplateResponse';
+import { CursorConfigGroupsResponse } from './cursorConfigGroupsResponse';
+import { CursorConfigGroupsResponseData } from './cursorConfigGroupsResponseData';
+import { CursorConfigTemplatesResponse } from './cursorConfigTemplatesResponse';
+import { CursorConfigTemplatesResponseData } from './cursorConfigTemplatesResponseData';
+import { CursorConfigsResponse } from './cursorConfigsResponse';
+import { CursorConfigsResponseData } from './cursorConfigsResponseData';
 import { CursorExtra } from './cursorExtra';
 import { CursorQuery } from './cursorQuery';
-import { DeleteRsp } from './deleteRsp';
-import { GetConfigGroupRsp } from './getConfigGroupRsp';
-import { GetConfigGroupsRsp } from './getConfigGroupsRsp';
-import { GetConfigRsp } from './getConfigRsp';
-import { GetConfigTemplateRsp } from './getConfigTemplateRsp';
+import { DeleteResponse } from './deleteResponse';
+import { GetConfigGroupResponse } from './getConfigGroupResponse';
+import { GetConfigResponse } from './getConfigResponse';
+import { GetConfigTemplateResponse } from './getConfigTemplateResponse';
 import { IdsReq } from './idsReq';
-import { PageConfigGroupsRsp } from './pageConfigGroupsRsp';
-import { PageConfigGroupsRspData } from './pageConfigGroupsRspData';
-import { PageConfigTemplatesRsp } from './pageConfigTemplatesRsp';
-import { PageConfigTemplatesRspData } from './pageConfigTemplatesRspData';
-import { PageConfigsRsp } from './pageConfigsRsp';
-import { PageConfigsRspData } from './pageConfigsRspData';
+import { PageConfigGroupsResponse } from './pageConfigGroupsResponse';
+import { PageConfigGroupsResponseData } from './pageConfigGroupsResponseData';
+import { PageConfigTemplatesResponse } from './pageConfigTemplatesResponse';
+import { PageConfigTemplatesResponseData } from './pageConfigTemplatesResponseData';
+import { PageConfigsResponse } from './pageConfigsResponse';
+import { PageConfigsResponseData } from './pageConfigsResponseData';
 import { PageQuery } from './pageQuery';
 import { RetrieveConfigByKeyReq } from './retrieveConfigByKeyReq';
-import { RetrieveConfigByKeyRsp } from './retrieveConfigByKeyRsp';
-import { RetrieveConfigGroupByNameRsp } from './retrieveConfigGroupByNameRsp';
-import { RetrieveConfigTemplateByKeyRsp } from './retrieveConfigTemplateByKeyRsp';
+import { RetrieveConfigByKeyResponse } from './retrieveConfigByKeyResponse';
+import { RetrieveConfigGroupByNameResponse } from './retrieveConfigGroupByNameResponse';
+import { RetrieveConfigTemplateByKeyResponse } from './retrieveConfigTemplateByKeyResponse';
 import { SortSpec } from './sortSpec';
 import { UpdateConfigGroupReq } from './updateConfigGroupReq';
-import { UpdateConfigGroupRsp } from './updateConfigGroupRsp';
+import { UpdateConfigGroupResponse } from './updateConfigGroupResponse';
 import { UpdateConfigReq } from './updateConfigReq';
-import { UpdateConfigRsp } from './updateConfigRsp';
+import { UpdateConfigResponse } from './updateConfigResponse';
 import { UpdateConfigTemplateReq } from './updateConfigTemplateReq';
-import { UpdateConfigTemplateRsp } from './updateConfigTemplateRsp';
+import { UpdateConfigTemplateResponse } from './updateConfigTemplateResponse';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -120,54 +122,55 @@ let enumsMap: {[index: string]: any} = {
 let typeMap: {[index: string]: any} = {
     "BatchRetrieveByKeysReq": BatchRetrieveByKeysReq,
     "BatchRetrieveByResourcesReq": BatchRetrieveByResourcesReq,
+    "BatchRetrieveConfigGroupsResponse": BatchRetrieveConfigGroupsResponse,
     "BatchRetrieveConfigTemplateByKeysReq": BatchRetrieveConfigTemplateByKeysReq,
-    "BatchRetrieveConfigTemplatesByGroupRsp": BatchRetrieveConfigTemplatesByGroupRsp,
-    "BatchRetrieveConfigTemplatesByKeysRsp": BatchRetrieveConfigTemplatesByKeysRsp,
-    "BatchRetrieveConfigTemplatesRsp": BatchRetrieveConfigTemplatesRsp,
-    "BatchRetrieveConfigsByKeysRsp": BatchRetrieveConfigsByKeysRsp,
-    "BatchRetrieveConfigsByResourcesRsp": BatchRetrieveConfigsByResourcesRsp,
-    "BatchRetrieveConfigsRsp": BatchRetrieveConfigsRsp,
+    "BatchRetrieveConfigTemplateByKeysResponse": BatchRetrieveConfigTemplateByKeysResponse,
+    "BatchRetrieveConfigTemplatesByGroupResponse": BatchRetrieveConfigTemplatesByGroupResponse,
+    "BatchRetrieveConfigTemplatesByKeysResponse": BatchRetrieveConfigTemplatesByKeysResponse,
+    "BatchRetrieveConfigTemplatesResponse": BatchRetrieveConfigTemplatesResponse,
+    "BatchRetrieveConfigsByKeysResponse": BatchRetrieveConfigsByKeysResponse,
+    "BatchRetrieveConfigsByResourcesResponse": BatchRetrieveConfigsByResourcesResponse,
+    "BatchRetrieveConfigsResponse": BatchRetrieveConfigsResponse,
     "Config": Config,
     "ConfigGroup": ConfigGroup,
     "ConfigTemplate": ConfigTemplate,
     "CreateConfigGroupReq": CreateConfigGroupReq,
-    "CreateConfigGroupRsp": CreateConfigGroupRsp,
+    "CreateConfigGroupResponse": CreateConfigGroupResponse,
     "CreateConfigReq": CreateConfigReq,
-    "CreateConfigRsp": CreateConfigRsp,
+    "CreateConfigResponse": CreateConfigResponse,
     "CreateConfigTemplateReq": CreateConfigTemplateReq,
-    "CreateConfigTemplateRsp": CreateConfigTemplateRsp,
-    "CursorConfigGroupsRsp": CursorConfigGroupsRsp,
-    "CursorConfigGroupsRspData": CursorConfigGroupsRspData,
-    "CursorConfigTemplatesRsp": CursorConfigTemplatesRsp,
-    "CursorConfigTemplatesRspData": CursorConfigTemplatesRspData,
-    "CursorConfigsRsp": CursorConfigsRsp,
-    "CursorConfigsRspData": CursorConfigsRspData,
+    "CreateConfigTemplateResponse": CreateConfigTemplateResponse,
+    "CursorConfigGroupsResponse": CursorConfigGroupsResponse,
+    "CursorConfigGroupsResponseData": CursorConfigGroupsResponseData,
+    "CursorConfigTemplatesResponse": CursorConfigTemplatesResponse,
+    "CursorConfigTemplatesResponseData": CursorConfigTemplatesResponseData,
+    "CursorConfigsResponse": CursorConfigsResponse,
+    "CursorConfigsResponseData": CursorConfigsResponseData,
     "CursorExtra": CursorExtra,
     "CursorQuery": CursorQuery,
-    "DeleteRsp": DeleteRsp,
-    "GetConfigGroupRsp": GetConfigGroupRsp,
-    "GetConfigGroupsRsp": GetConfigGroupsRsp,
-    "GetConfigRsp": GetConfigRsp,
-    "GetConfigTemplateRsp": GetConfigTemplateRsp,
+    "DeleteResponse": DeleteResponse,
+    "GetConfigGroupResponse": GetConfigGroupResponse,
+    "GetConfigResponse": GetConfigResponse,
+    "GetConfigTemplateResponse": GetConfigTemplateResponse,
     "IdsReq": IdsReq,
-    "PageConfigGroupsRsp": PageConfigGroupsRsp,
-    "PageConfigGroupsRspData": PageConfigGroupsRspData,
-    "PageConfigTemplatesRsp": PageConfigTemplatesRsp,
-    "PageConfigTemplatesRspData": PageConfigTemplatesRspData,
-    "PageConfigsRsp": PageConfigsRsp,
-    "PageConfigsRspData": PageConfigsRspData,
+    "PageConfigGroupsResponse": PageConfigGroupsResponse,
+    "PageConfigGroupsResponseData": PageConfigGroupsResponseData,
+    "PageConfigTemplatesResponse": PageConfigTemplatesResponse,
+    "PageConfigTemplatesResponseData": PageConfigTemplatesResponseData,
+    "PageConfigsResponse": PageConfigsResponse,
+    "PageConfigsResponseData": PageConfigsResponseData,
     "PageQuery": PageQuery,
     "RetrieveConfigByKeyReq": RetrieveConfigByKeyReq,
-    "RetrieveConfigByKeyRsp": RetrieveConfigByKeyRsp,
-    "RetrieveConfigGroupByNameRsp": RetrieveConfigGroupByNameRsp,
-    "RetrieveConfigTemplateByKeyRsp": RetrieveConfigTemplateByKeyRsp,
+    "RetrieveConfigByKeyResponse": RetrieveConfigByKeyResponse,
+    "RetrieveConfigGroupByNameResponse": RetrieveConfigGroupByNameResponse,
+    "RetrieveConfigTemplateByKeyResponse": RetrieveConfigTemplateByKeyResponse,
     "SortSpec": SortSpec,
     "UpdateConfigGroupReq": UpdateConfigGroupReq,
-    "UpdateConfigGroupRsp": UpdateConfigGroupRsp,
+    "UpdateConfigGroupResponse": UpdateConfigGroupResponse,
     "UpdateConfigReq": UpdateConfigReq,
-    "UpdateConfigRsp": UpdateConfigRsp,
+    "UpdateConfigResponse": UpdateConfigResponse,
     "UpdateConfigTemplateReq": UpdateConfigTemplateReq,
-    "UpdateConfigTemplateRsp": UpdateConfigTemplateRsp,
+    "UpdateConfigTemplateResponse": UpdateConfigTemplateResponse,
 }
 
 export class ObjectSerializer {

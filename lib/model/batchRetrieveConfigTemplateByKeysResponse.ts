@@ -11,34 +11,21 @@
  */
 
 import { RequestFile } from '../api';
-import { Config } from './config';
 
-export class RetrieveConfigByKeyReq {
-    'code'?: number;
-    'msg'?: string;
-    'data'?: Array<Config>;
+export class BatchRetrieveConfigTemplateByKeysResponse {
+    'keys'?: Array<string>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "code",
-            "baseName": "code",
-            "type": "number"
-        },
-        {
-            "name": "msg",
-            "baseName": "msg",
-            "type": "string"
-        },
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "Array<Config>"
+            "name": "keys",
+            "baseName": "keys",
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {
-        return RetrieveConfigByKeyReq.attributeTypeMap;
+        return BatchRetrieveConfigTemplateByKeysResponse.attributeTypeMap;
     }
 }
 
