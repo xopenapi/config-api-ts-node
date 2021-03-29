@@ -13,7 +13,7 @@
 import { RequestFile } from '../api';
 import { Config } from './config';
 
-export class GetConfigRsp {
+export class UpsertConfigResponse {
     'code'?: number;
     'msg'?: string;
     'data'?: Config;
@@ -38,7 +38,7 @@ export class GetConfigRsp {
         }    ];
 
     static getAttributeTypeMap() {
-        return GetConfigRsp.attributeTypeMap;
+        return UpsertConfigResponse.attributeTypeMap;
     }
 }
 

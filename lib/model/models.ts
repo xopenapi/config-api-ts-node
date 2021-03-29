@@ -49,6 +49,8 @@ export * from './updateConfigReq';
 export * from './updateConfigResponse';
 export * from './updateConfigTemplateReq';
 export * from './updateConfigTemplateResponse';
+export * from './upsertConfigReq';
+export * from './upsertConfigResponse';
 
 import localVarRequest = require('request');
 
@@ -103,6 +105,8 @@ import { UpdateConfigReq } from './updateConfigReq';
 import { UpdateConfigResponse } from './updateConfigResponse';
 import { UpdateConfigTemplateReq } from './updateConfigTemplateReq';
 import { UpdateConfigTemplateResponse } from './updateConfigTemplateResponse';
+import { UpsertConfigReq } from './upsertConfigReq';
+import { UpsertConfigResponse } from './upsertConfigResponse';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -171,6 +175,8 @@ let typeMap: {[index: string]: any} = {
     "UpdateConfigResponse": UpdateConfigResponse,
     "UpdateConfigTemplateReq": UpdateConfigTemplateReq,
     "UpdateConfigTemplateResponse": UpdateConfigTemplateResponse,
+    "UpsertConfigReq": UpsertConfigReq,
+    "UpsertConfigResponse": UpsertConfigResponse,
 }
 
 export class ObjectSerializer {

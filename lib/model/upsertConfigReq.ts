@@ -11,34 +11,42 @@
  */
 
 import { RequestFile } from '../api';
-import { PageConfigTemplatesRspData } from './pageConfigTemplatesRspData';
 
-export class PageConfigTemplatesRsp {
-    'code'?: number;
-    'msg'?: string;
-    'data'?: PageConfigTemplatesRspData;
+export class UpsertConfigReq {
+    /**
+    * 资源ID
+    */
+    'resourceId'?: string;
+    /**
+    * 对应的字段名
+    */
+    'key'?: string;
+    /**
+    * json格式的键值对数据
+    */
+    'value'?: object;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "code",
-            "baseName": "code",
-            "type": "number"
-        },
-        {
-            "name": "msg",
-            "baseName": "msg",
+            "name": "resourceId",
+            "baseName": "resourceId",
             "type": "string"
         },
         {
-            "name": "data",
-            "baseName": "data",
-            "type": "PageConfigTemplatesRspData"
+            "name": "key",
+            "baseName": "key",
+            "type": "string"
+        },
+        {
+            "name": "value",
+            "baseName": "value",
+            "type": "object"
         }    ];
 
     static getAttributeTypeMap() {
-        return PageConfigTemplatesRsp.attributeTypeMap;
+        return UpsertConfigReq.attributeTypeMap;
     }
 }
 
