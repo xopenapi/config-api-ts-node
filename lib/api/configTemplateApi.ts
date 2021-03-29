@@ -109,7 +109,7 @@ export class ConfigTemplateApi {
      * @summary 批量删除配置模版
      * @param idsReq 
      */
-    public async batchDeleteConfigTemplates (idsReq?: IdsReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: DeleteResponse;  }> {
+    public async batchDeleteConfigTemplates (idsReq?: IdsReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DeleteResponse;  }> {
         const localVarPath = this.basePath + '/configTemplate/batchDelete';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -155,7 +155,7 @@ export class ConfigTemplateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: DeleteResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: DeleteResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -176,7 +176,7 @@ export class ConfigTemplateApi {
      * @summary 查询配置模版
      * @param groupName 分组标签名
      */
-    public async batchRetrieveByGroupConfigTemplates (groupName: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: BatchRetrieveConfigTemplatesByGroupResponse;  }> {
+    public async batchRetrieveByGroupConfigTemplates (groupName: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: BatchRetrieveConfigTemplatesByGroupResponse;  }> {
         const localVarPath = this.basePath + '/configTemplate/batchRetrieveByGroup';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -230,7 +230,7 @@ export class ConfigTemplateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: BatchRetrieveConfigTemplatesByGroupResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: BatchRetrieveConfigTemplatesByGroupResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -251,7 +251,7 @@ export class ConfigTemplateApi {
      * @summary 查询配置模版
      * @param batchRetrieveConfigTemplateByKeysReq 
      */
-    public async batchRetrieveByKeysConfigTemplates (batchRetrieveConfigTemplateByKeysReq?: BatchRetrieveConfigTemplateByKeysReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: BatchRetrieveConfigTemplatesByKeysResponse;  }> {
+    public async batchRetrieveByKeysConfigTemplates (batchRetrieveConfigTemplateByKeysReq?: BatchRetrieveConfigTemplateByKeysReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: BatchRetrieveConfigTemplatesByKeysResponse;  }> {
         const localVarPath = this.basePath + '/configTemplate/batchRetrieveByKeys';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -297,7 +297,7 @@ export class ConfigTemplateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: BatchRetrieveConfigTemplatesByKeysResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: BatchRetrieveConfigTemplatesByKeysResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -318,7 +318,7 @@ export class ConfigTemplateApi {
      * @summary 批量查询配置模版
      * @param idsReq 
      */
-    public async batchRetrieveConfigTemplates (idsReq?: IdsReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: BatchRetrieveConfigTemplatesResponse;  }> {
+    public async batchRetrieveConfigTemplates (idsReq?: IdsReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: BatchRetrieveConfigTemplatesResponse;  }> {
         const localVarPath = this.basePath + '/configTemplate/batchRetrieve';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -364,7 +364,7 @@ export class ConfigTemplateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: BatchRetrieveConfigTemplatesResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: BatchRetrieveConfigTemplatesResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -385,7 +385,7 @@ export class ConfigTemplateApi {
      * @summary 创建配置模版
      * @param createConfigTemplateReq 
      */
-    public async createConfigTemplate (createConfigTemplateReq?: CreateConfigTemplateReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: CreateConfigTemplateResponse;  }> {
+    public async createConfigTemplate (createConfigTemplateReq?: CreateConfigTemplateReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateConfigTemplateResponse;  }> {
         const localVarPath = this.basePath + '/configTemplate';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -431,7 +431,7 @@ export class ConfigTemplateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: CreateConfigTemplateResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: CreateConfigTemplateResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -452,7 +452,7 @@ export class ConfigTemplateApi {
      * @summary Cursor查询配置模版
      * @param cursorQuery 
      */
-    public async cursorConfigTemplates (cursorQuery?: CursorQuery, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: CursorConfigTemplatesResponse;  }> {
+    public async cursorConfigTemplates (cursorQuery?: CursorQuery, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CursorConfigTemplatesResponse;  }> {
         const localVarPath = this.basePath + '/configTemplate/cursor';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -498,7 +498,7 @@ export class ConfigTemplateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: CursorConfigTemplatesResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: CursorConfigTemplatesResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -519,7 +519,7 @@ export class ConfigTemplateApi {
      * @summary 删除配置模版
      * @param id 删除配置模版
      */
-    public async deleteConfigTemplate (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: DeleteResponse;  }> {
+    public async deleteConfigTemplate (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DeleteResponse;  }> {
         const localVarPath = this.basePath + '/configTemplate/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -570,7 +570,7 @@ export class ConfigTemplateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: DeleteResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: DeleteResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -591,7 +591,7 @@ export class ConfigTemplateApi {
      * @summary 查询配置模版
      * @param id 查询配置通过配置ID
      */
-    public async getConfigTemplate (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: GetConfigTemplateResponse;  }> {
+    public async getConfigTemplate (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetConfigTemplateResponse;  }> {
         const localVarPath = this.basePath + '/configTemplate/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -642,7 +642,7 @@ export class ConfigTemplateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: GetConfigTemplateResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: GetConfigTemplateResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -663,7 +663,7 @@ export class ConfigTemplateApi {
      * @summary Page查询配置模版
      * @param pageQuery 
      */
-    public async pageConfigTemplate (pageQuery?: PageQuery, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PageConfigTemplatesResponse;  }> {
+    public async pageConfigTemplate (pageQuery?: PageQuery, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageConfigTemplatesResponse;  }> {
         const localVarPath = this.basePath + '/configTemplate/page';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -709,7 +709,7 @@ export class ConfigTemplateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: PageConfigTemplatesResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: PageConfigTemplatesResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -730,7 +730,7 @@ export class ConfigTemplateApi {
      * @summary 查询配置模版
      * @param key 主键Key
      */
-    public async retrieveByKeyConfigTemplate (key: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: RetrieveConfigTemplateByKeyResponse;  }> {
+    public async retrieveByKeyConfigTemplate (key: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: RetrieveConfigTemplateByKeyResponse;  }> {
         const localVarPath = this.basePath + '/configTemplate/retrieveByKey';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -784,7 +784,7 @@ export class ConfigTemplateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: RetrieveConfigTemplateByKeyResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: RetrieveConfigTemplateByKeyResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

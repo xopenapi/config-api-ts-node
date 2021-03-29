@@ -108,7 +108,7 @@ export class ConfigGroupApi {
      * @summary 批量删除组
      * @param idsReq 
      */
-    public async batchDeleteGroups (idsReq?: IdsReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: DeleteResponse;  }> {
+    public async batchDeleteGroups (idsReq?: IdsReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DeleteResponse;  }> {
         const localVarPath = this.basePath + '/configGroup/batchDelete';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -154,7 +154,7 @@ export class ConfigGroupApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: DeleteResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: DeleteResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -175,7 +175,7 @@ export class ConfigGroupApi {
      * @summary 批量查询组
      * @param idsReq 
      */
-    public async batchRetrieveGroups (idsReq?: IdsReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: BatchRetrieveConfigGroupsResponse;  }> {
+    public async batchRetrieveGroups (idsReq?: IdsReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: BatchRetrieveConfigGroupsResponse;  }> {
         const localVarPath = this.basePath + '/configGroup/batchRetrieve';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -221,7 +221,7 @@ export class ConfigGroupApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: BatchRetrieveConfigGroupsResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: BatchRetrieveConfigGroupsResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -242,7 +242,7 @@ export class ConfigGroupApi {
      * @summary 创建组
      * @param createConfigGroupReq 
      */
-    public async createGroup (createConfigGroupReq?: CreateConfigGroupReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: CreateConfigGroupResponse;  }> {
+    public async createGroup (createConfigGroupReq?: CreateConfigGroupReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateConfigGroupResponse;  }> {
         const localVarPath = this.basePath + '/configGroup';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -288,7 +288,7 @@ export class ConfigGroupApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: CreateConfigGroupResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: CreateConfigGroupResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -309,7 +309,7 @@ export class ConfigGroupApi {
      * @summary Cursor查询组
      * @param cursorQuery 
      */
-    public async cursorGroups (cursorQuery?: CursorQuery, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: CursorConfigGroupsResponse;  }> {
+    public async cursorGroups (cursorQuery?: CursorQuery, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CursorConfigGroupsResponse;  }> {
         const localVarPath = this.basePath + '/configGroup/cursor';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -355,7 +355,7 @@ export class ConfigGroupApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: CursorConfigGroupsResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: CursorConfigGroupsResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -376,7 +376,7 @@ export class ConfigGroupApi {
      * @summary 删除组
      * @param id 删除组
      */
-    public async deleteGroup (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: DeleteResponse;  }> {
+    public async deleteGroup (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DeleteResponse;  }> {
         const localVarPath = this.basePath + '/configGroup/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -427,7 +427,7 @@ export class ConfigGroupApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: DeleteResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: DeleteResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -448,7 +448,7 @@ export class ConfigGroupApi {
      * @summary 查询组
      * @param id 查询组通过组ID
      */
-    public async getGroup (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: GetConfigGroupResponse;  }> {
+    public async getGroup (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetConfigGroupResponse;  }> {
         const localVarPath = this.basePath + '/configGroup/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -499,7 +499,7 @@ export class ConfigGroupApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: GetConfigGroupResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: GetConfigGroupResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -520,7 +520,7 @@ export class ConfigGroupApi {
      * @summary Page查询组
      * @param pageQuery 
      */
-    public async pageGroups (pageQuery?: PageQuery, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PageConfigGroupsResponse;  }> {
+    public async pageGroups (pageQuery?: PageQuery, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageConfigGroupsResponse;  }> {
         const localVarPath = this.basePath + '/configGroup/page';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -566,7 +566,7 @@ export class ConfigGroupApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: PageConfigGroupsResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: PageConfigGroupsResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -587,7 +587,7 @@ export class ConfigGroupApi {
      * @summary 查询组
      * @param name 查询组通过Name
      */
-    public async retrieveByNameGroup (name: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: RetrieveConfigGroupByNameResponse;  }> {
+    public async retrieveByNameGroup (name: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: RetrieveConfigGroupByNameResponse;  }> {
         const localVarPath = this.basePath + '/configGroup/retrieveByName';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -641,7 +641,7 @@ export class ConfigGroupApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: RetrieveConfigGroupByNameResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: RetrieveConfigGroupByNameResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -662,7 +662,7 @@ export class ConfigGroupApi {
      * @summary 更新组
      * @param updateConfigGroupReq 
      */
-    public async updateGroup (updateConfigGroupReq?: UpdateConfigGroupReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: UpdateConfigGroupResponse;  }> {
+    public async updateGroup (updateConfigGroupReq?: UpdateConfigGroupReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: UpdateConfigGroupResponse;  }> {
         const localVarPath = this.basePath + '/configGroup';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -708,7 +708,7 @@ export class ConfigGroupApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: UpdateConfigGroupResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: UpdateConfigGroupResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
